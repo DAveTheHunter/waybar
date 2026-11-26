@@ -1,0 +1,99 @@
+{
+    "layer": "top",
+    "position": "top",
+    "width": 1000,
+    "height": 32,
+    "margin-top": 13,
+    "spacing": 8,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "cava"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "battery"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "all-outputs": true,
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "cava": {
+        "framerate": 30,
+        "autosens": 1,
+        "bars": 12,
+        "method": "pipewire",
+        "source": "auto",
+        "stereo": true,
+        "bar_delimiter": 0,
+        "format": "{bars}",
+        "monospace": true
+    },
+
+    "clock": {
+        "format": "󰥔  {:%H:%M}",
+        "interval": 1,
+        // "tooltip-format": "<big>{:%A, %B %d, %Y}</big>\n<tt>{calendar}</tt>"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟  Muted",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "scroll-step": 5,
+        "tooltip": true
+    },
+
+    "network": {
+        "format-wifi": "󰤨  {essid}",
+        "format-ethernet": "󰈀  Connected",
+        "format-disconnected": "󰤭  Offline",
+        "tooltip-format": "{ifname}: {ipaddr}\nSignal: {signalStrength}%",
+        "interval": 5,
+        "on-click": "nm-connection-editor"
+    },
+
+    "battery": {
+        "bat": "BAT0",
+        "interval": 10,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": "󰂄  {capacity}%",
+        "format-plugged": "󰚥  {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ],
+        "tooltip": true
+    }
+}
+

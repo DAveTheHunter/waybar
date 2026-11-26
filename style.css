@@ -1,0 +1,106 @@
+
+* {
+    font-family: "Iosevka Nerd Font";
+    font-size: 14px;
+    font-weight: 600;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #e0def4;
+}
+
+window#waybar > box {
+    /* background: rgba(25, 23, 36, 0.92); */
+    /* background: #0B0F13; */
+    /* border: 1px solid rgba(110, 106, 134, 0.35); */
+    /* border-radius: 12px; */
+}
+
+#workspaces,
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#cava {
+    padding: 0 10px;
+    margin: 4px 3px;
+    border-radius: 8px;
+    /* background: rgba(49, 46, 67, 0.65); */
+    background: rgba(0,0,0,1);
+    /* width: 400px; */
+    /* height: 20px; */
+}
+
+
+#workspaces button {
+    color: #908caa;
+    /* color: wheat; */
+    background: transparent;
+    border: none;
+    border-radius: 7px;
+    padding: 0 8px;
+    margin: 3px 2px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+    color: #191724;
+    /* background: #00def4; */
+    background: wheat;
+}
+
+#workspaces button:hover {
+    color: #e0def4;
+    background: rgba(196, 167, 231, 0.25);
+    box-shadow: none;
+}
+
+#clock {
+    /* color: #f6c177; */
+    /* color: rgba(18,101,2,10); */
+    color: #908caa;
+}
+
+/* #cava { */
+/*     color: #c4a7e7; */
+/* } */
+
+#pulseaudio {
+    /* color: #f6c177; */
+    /* color: rgba(18,101,1,12); */
+    color: #908caa;
+}
+
+#network {
+    color: #9ccfd8;
+}
+
+#battery {
+    color: #a3be8c;
+}
+
+#battery.warning {
+    color: #f6c177;
+}
+
+#battery.critical {
+    color: #eb6f92;
+}
+
+#battery.charging {
+    color: #a3be8c;
+}
+
+tooltip {
+    background: #191724;
+    border: 1px solid #6e6a86;
+    border-radius: 8px;
+    color: #e0def4;
+}
+
+tooltip label {
+    color: #e0def4;
+}
+
